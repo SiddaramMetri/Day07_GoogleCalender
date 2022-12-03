@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    background: #8b82e0;
+    color: #333333;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.card_header {
+    padding: 0 1.25rem;
+    color: #7D8994;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_body {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.card_body_days {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+li {
+    flex: 1;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    color: #7D8994;
+    margin: 0 1px;
+}
+
+.card {
+    background: #ffffff;
+    width: 90%;
+    max-width: 40rem;
+    min-height: 40rem;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-rows: 8rem auto 10rem;
+    box-shadow: 0 1rem 2.5rem rgb(27, 64, 94);
+}
+
+li {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: grid;
+    place-items: center;
+    font-weight: bold;
+    position: relative;
+}
+
+li.prev,
+li.next {
+    color: #ccc;
+}
+
+li.active {
+    background: #DE6E46;
+    color: #fff;
+    border-radius: 50%;
+}
+
+li.circle {
+    border: 2px solid;
+    border-radius: 50%;
+}
+span {
+    position: absolute;
+    top: -0.75rem;
+    right: -0.5rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+    border-radius: 50%;
+}
+.card_body_dates {
+    display: grid;
+    gap: 3px;
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    text-align: center;
+}
+.circle.orange {
+    border-color: #DE6E46;
+}
+.circle.purple {
+    background: #DE6E46;
+    color: #fff;
+}
+span {
+    background: #DE6E46;
+}
+
+.card_body ul li:hover{
+    background-color:crimson;
+    border-radius: 50%;
+    color: #fff;
+}
+
+@media only screen and (max-width:600px){
+    body {
+        background: #edc686;
+        color: #333333;
+        font-size: 1.5rem;
+    }
+    .card {
+        background: #fff;
+        width: 90%;
+        max-width: 40rem;
+        min-height: 40rem;
+        margin: 5rem auto;
+        display: grid;
+        box-shadow: 0 1rem 2.5rem rgb(27, 64, 94);
+    }
+    .card_body ul li:hover{
+        background-color:#DE6E46;
+        border-radius: 50%;
+        color: #fff;
+    }
+}
